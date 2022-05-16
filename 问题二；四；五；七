@@ -1,0 +1,82 @@
+问题二 
+3-1
+class(Inf)
+class(NA)
+class(NaN)
+class("")
+attributes(Inf)
+attributes(NA)
+attributes(NaN)
+attributes("")
+
+3-2
+pets<-sample(c("dolphin","dog","hamster","goldfish"),100,replace=TRUE)
+pets_fac<-as.factor(pets)
+summary(pets_fac)
+
+3-3
+apple<-50
+orange<-30
+grape<-40
+avocado<-89
+print(ls(pattern="a"))  
+
+问题四
+（1）
+a<-seq(11,50,3)
+a-2:3
+（2）
+b<-seq(1.1,4,20)
+b*c(4,5,8,9)
+（3）
+c(1,2,4,6)+c(8,0,-1,-4)
+c(1,2,4,6)-c(8,0,-1,-4)
+c(1,2,4,6)*c(8,0,-1,-4)
+c(1,2,4,6)/c(8,0,-1,-4)
+
+
+问题五
+4-1
+n<-seq(1,50)
+a<-n*(n+1)/2
+b<-letters[1:15]
+names(a)<-c(b)
+names(a)
+print(ls(pattern="a"))
+print(ls(pattern="e")) 
+print(ls(pattern="i")) 
+print(ls(pattern="o")) 
+print(ls(pattern="u"))
+
+4-2
+a=c(10,9,8,7,6,5,4,3,2,1,0,1,2,3,4,5,6,7,8,9,10)
+square=diag(a)
+square
+
+问题七
+5-1
+x <- 0:99
+sqrt_x <- sqrt(x)
+
+is_square_number <- sqrt_x == floor(sqrt_x)
+square_numbers <- x[is_square_number]
+
+groups <- cut(
+  square_numbers,
+  seq.int(min(x),max(x),10),
+  include.lowest = TRUE,
+  right = FALSE)
+split(square_numbers,groups)
+
+5-2
+iris
+a_data<-data.frame(iris)
+a_data
+colMeans(a_data[,1:4])
+
+5-3
+new_beaver1 = data.frame(id = rep(1,114),beaver1)
+new_beaver2 = data.frame(id = rep(2,100),beaver2)
+new_beaver=rbind(new_beaver1,new_beaver2)
+new_beaver[new_beaver$activ==1,]
+
